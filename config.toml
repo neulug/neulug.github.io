@@ -1,0 +1,20 @@
+baseURL = "https://neulug.github.io/"
+languageCode = "en-us"
+title = "NEU LUG"
+theme = "hugo-theme-console"
+[params]
+  # Cutting off the page title to two chars for mobile (console-demo -> co)
+  titleCutting = false
+
+  [[params.navlinks]]
+  name = "about/"
+  url = "about/"
+
+  [[params.navlinks]]
+  name = "posts/"
+  url = "posts/"
+  
+  [[params.navlinks]]
+  name = "photos/"
+  url = "photos/"
+
