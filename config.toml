@@ -1,5 +1,5 @@
 baseURL = "https://neulug.github.io/"
-languageCode = "en-us"
+languageCode = "zh-Hans"
 title = "NEU LUG"
 theme = "hugo-theme-console"
 [params]
