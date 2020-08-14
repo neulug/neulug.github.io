@@ -1,7 +1,6 @@
 ---
 title: "流行的Linux发行版"
 date: 2020-08-14T22:15:50+08:00
-draft: true
 ---
 
 一般说到Linux，我们指的往往是Linux发行版，而并非Linux内核。
@@ -12,21 +11,23 @@ draft: true
 
 当今世界上有超过300个Linux发行版，不同的Linux发行版有着不同的侧重面、不同的用户群体。本文旨在向读者推荐几种流行的Linux发行版，省去选择的烦扰。
 
-1. `Arch Linux`
+<!--more-->
 
-   ![](./archlinux.png)
+## Arch Linux
 
-   `Arch Linux`是一款以简洁、轻量为设计理念的Linux发行版，注重代码正确、优雅和极简主义，自定义程度高。其采用滚动发行模式，没有所谓的大版本更新，每次常规更新都会将系统和软件保持在最新状态。
+<img src="./archlinux.png" width=50%>
 
-   其安装过程较为简陋，缺乏图形化安装界面，需要用户有一定Linux环境常识才能正确安装使用。
+`Arch Linux`是一款以简洁、轻量为设计理念的Linux发行版，注重代码正确、优雅和极简主义，自定义程度高。其采用滚动发行模式，没有所谓的大版本更新，每次常规更新都会将系统和软件保持在最新状态。
 
-2. `Ubuntu`
+其安装过程较为简陋，缺乏图形化安装界面，需要用户有一定Linux环境常识才能正确安装使用。
 
-   ![](./ubuntu.png)
+## Ubuntu
 
-   与`Arch Linux`和`Gentoo`等发行版不同，`Ubuntu`旨在成为初学者的理想选择，基于`Debian`发行版和`Gnome`桌面环境，是以桌面应用为主的Linux发行版。
+<img src="./ubuntu.png" width=50%>
 
-   `Ubuntu`是著名的Linux发行版之一，同时也是目前最多用户的Linux发行版。
+与`Arch Linux`和`Gentoo`等发行版不同，`Ubuntu`旨在成为初学者的理想选择，基于`Debian`发行版和`Gnome`桌面环境，是以桌面应用为主的Linux发行版。
+
+`Ubuntu`是著名的Linux发行版之一，同时也是目前最多用户的Linux发行版。
 
 -------
 
