@@ -18,3 +18,7 @@ theme = "hugo-theme-console"
   name = "photos/"
   url = "photos/"
 
+[markup]  
+  [markup.goldmark]    
+    [markup.goldmark.renderer]     
+      unsafe = true
