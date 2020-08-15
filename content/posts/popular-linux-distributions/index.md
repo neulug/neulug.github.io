@@ -15,7 +15,9 @@ date: 2020-08-14T22:15:50+08:00
 
 ## Arch Linux
 
-<img src="./archlinux.png" width=50%>
+<div align="center">
+    <img src="./archlinux.png" width=50%>
+</div>
 
 `Arch Linux`是一款以简洁、轻量为设计理念的Linux发行版，注重代码正确、优雅和极简主义，自定义程度高。其采用滚动发行模式，没有所谓的大版本更新，每次常规更新都会将系统和软件保持在最新状态。
 
@@ -23,7 +25,9 @@ date: 2020-08-14T22:15:50+08:00
 
 ## Ubuntu
 
-<img src="./ubuntu.png" width=50%>
+<div align="center">
+    <img src="./ubuntu.png" width=50%>
+</div>
 
 与`Arch Linux`和`Gentoo`等发行版不同，`Ubuntu`旨在成为初学者的理想选择，基于`Debian`发行版和`Gnome`桌面环境，是以桌面应用为主的Linux发行版。
 
