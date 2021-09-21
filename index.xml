@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NEU LUG</title><link>https://neulug.github.io/</link><description>Recent content on NEU LUG</description><generator>Hugo -- gohugo.io</generator><language>zh-Hans</language><lastBuildDate>Fri, 14 Aug 2020 22:15:50 +0800</lastBuildDate><atom:link href="https://neulug.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>流行的Linux发行版</title><link>https://neulug.github.io/posts/popular-linux-distributions/</link><pubDate>Fri, 14 Aug 2020 22:15:50 +0800</pubDate><guid>https://neulug.github.io/posts/popular-linux-distributions/</guid><description>&lt;p>一般说到Linux，我们指的往往是Linux发行版，而并非Linux内核。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NEU LUG</title><link>https://neulug.github.io/</link><description>Recent content on NEU LUG</description><generator>Hugo -- gohugo.io</generator><language>zh-Hans</language><lastBuildDate>Tue, 21 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://neulug.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>docker+jenkins实现自动化部署</title><link>https://neulug.github.io/posts/docker_jenkins/</link><pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate><guid>https://neulug.github.io/posts/docker_jenkins/</guid><description>Jenkins 介绍 Jenkins是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件项目可以进行持续集成
+Docker Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。
+自动化部署 自动化部署（持续集成/CI+持续交付/CD）不仅可以提升开发效率，让程序员更专注产品与业务的开发，还可以节省很多运维成本以及提升运维效率。
+Jenkins是自动化部署中最流行的工具，尤其是Docker+Jenkins的完美搭配，每个程序员都应该掌握这两个工具的使用。
+1 安装Docker 此步暂略
+2 Docker下安装Jenkins 2.1 搜索docker镜像 docker的hub上有一些我们可以直接使用的镜像，使用这些镜像可以减少我们配置的时间
+docker search jenkins
+我们选择使用jenkinsci/blueocean镜像，此镜像已经包含blueocean插件，方便我们使用
+2.2 拉取镜像 docker pull jenkinsci/bluecoean
+2.3 查看本地镜像 docker image ls
+IMAGE ID: 是我们直接操控某一镜像的唯一ID，使用时一般取前三位即可识别
+2.4 创建Jenkins目录，存放容器数据 mkdir /data/jenkins_home
+2.5 启动Jenkin 这里我们采用脚本启动，我的脚本内容如下
+sudo docker run \
+-d \ -u root \ --name jenkins \ -p 50000:50000 \ -p 8080:8080 \ -v /data/jenkins_home:/var/jenkins_home \ jenkinsci/blueocean 2.6 查看Jenkins启动情况 docker ps
+2.</description></item><item><title>流行的Linux发行版</title><link>https://neulug.github.io/posts/popular-linux-distributions/</link><pubDate>Fri, 14 Aug 2020 22:15:50 +0800</pubDate><guid>https://neulug.github.io/posts/popular-linux-distributions/</guid><description>&lt;p>一般说到Linux，我们指的往往是Linux发行版，而并非Linux内核。&lt;/p>
 &lt;p>什么是Linux发行版？引用维基百科的定义：&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>Linux 发行版&lt;/strong>（英语：Linux distribution，也被叫做&lt;strong>GNU/Linux 发行版&lt;/strong>），为一般用户预先集成好的&lt;a href="https://zh.wikipedia.org/wiki/Linux">Linux&lt;/a>&lt;a href="https://zh.wikipedia.org/wiki/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1">操作系统&lt;/a>及各种应用软件。一般用户不需要重新&lt;a href="https://zh.wikipedia.org/wiki/%E7%BC%96%E8%AF%91">编译&lt;/a>，在直接安装之后，只需要小幅度更改设置就可以使用，通常以&lt;a href="https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">软件包管理系统&lt;/a>来进行应用软件的管理。Linux发行版通常包含了包括&lt;a href="https://zh.wikipedia.org/wiki/%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83">桌面环境&lt;/a>、&lt;a href="https://zh.wikipedia.org/w/index.php?title=%E5%8A%9E%E5%85%AC%E5%A5%97%E4%BB%B6&amp;amp;action=edit&amp;amp;redlink=1">办公包&lt;/a>、&lt;a href="https://zh.wikipedia.org/wiki/%E5%AA%92%E4%BD%93%E6%92%AD%E6%94%BE%E5%99%A8">媒体播放器&lt;/a>、&lt;a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E5%BA%93">数据库&lt;/a>等应用软件。这些&lt;a href="https://zh.wikipedia.org/wiki/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">操作系统&lt;/a>通常由Linux内核、以及来自GNU计划的大量的&lt;a href="https://zh.wikipedia.org/wiki/%E5%87%BD%E5%BC%8F%E5%BA%AB">函数库&lt;/a>，和基于&lt;a href="https://zh.wikipedia.org/wiki/X_Window">X Window&lt;/a>的图形界面。&lt;/p>
