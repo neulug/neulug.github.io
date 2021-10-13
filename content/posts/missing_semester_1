@@ -1,0 +1,699 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>New Page</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(96, 96, 98, 0.93);
+	fill: rgba(96, 96, 98, 0.93);
+}
+.highlight-brown {
+	color: rgba(174, 102, 29, 1);
+	fill: rgba(174, 102, 29, 1);
+}
+.highlight-orange {
+	color: rgba(210, 82, 22, 1);
+	fill: rgba(210, 82, 22, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(62, 143, 53, 1);
+	fill: rgba(62, 143, 53, 1);
+}
+.highlight-blue {
+	color: rgba(33, 131, 190, 1);
+	fill: rgba(33, 131, 190, 1);
+}
+.highlight-purple {
+	color: rgba(151, 93, 190, 1);
+	fill: rgba(151, 93, 190, 1);
+}
+.highlight-pink {
+	color: rgba(203, 62, 132, 1);
+	fill: rgba(203, 62, 132, 1);
+}
+.highlight-red {
+	color: rgba(208, 60, 60, 1);
+	fill: rgba(208, 60, 60, 1);
+}
+.highlight-gray_background {
+	background: rgba(234, 234, 235, 0.93);
+}
+.highlight-brown_background {
+	background: rgba(213, 130, 38, 0.13);
+}
+.highlight-orange_background {
+	background: rgba(252, 103, 27, 0.13);
+}
+.highlight-yellow_background {
+	background: rgba(253, 183, 63, 0.13);
+}
+.highlight-teal_background {
+	background: rgba(76, 169, 66, 0.13);
+}
+.highlight-blue_background {
+	background: rgba(45, 159, 226, 0.13);
+}
+.highlight-purple_background {
+	background: rgba(187, 123, 230, 0.13);
+}
+.highlight-pink_background {
+	background: rgba(255, 85, 163, 0.13);
+}
+.highlight-red_background {
+	background: rgba(255, 82, 71, 0.13);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(96, 96, 98, 0.93);
+	fill: rgba(96, 96, 98, 0.93);
+}
+.block-color-brown {
+	color: rgba(174, 102, 29, 1);
+	fill: rgba(174, 102, 29, 1);
+}
+.block-color-orange {
+	color: rgba(210, 82, 22, 1);
+	fill: rgba(210, 82, 22, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(62, 143, 53, 1);
+	fill: rgba(62, 143, 53, 1);
+}
+.block-color-blue {
+	color: rgba(33, 131, 190, 1);
+	fill: rgba(33, 131, 190, 1);
+}
+.block-color-purple {
+	color: rgba(151, 93, 190, 1);
+	fill: rgba(151, 93, 190, 1);
+}
+.block-color-pink {
+	color: rgba(203, 62, 132, 1);
+	fill: rgba(203, 62, 132, 1);
+}
+.block-color-red {
+	color: rgba(208, 60, 60, 1);
+	fill: rgba(208, 60, 60, 1);
+}
+.block-color-gray_background {
+	background: rgba(234, 234, 235, 0.93);
+}
+.block-color-brown_background {
+	background: rgba(213, 130, 38, 0.13);
+}
+.block-color-orange_background {
+	background: rgba(252, 103, 27, 0.13);
+}
+.block-color-yellow_background {
+	background: rgba(253, 183, 63, 0.13);
+}
+.block-color-teal_background {
+	background: rgba(76, 169, 66, 0.13);
+}
+.block-color-blue_background {
+	background: rgba(45, 159, 226, 0.13);
+}
+.block-color-purple_background {
+	background: rgba(187, 123, 230, 0.13);
+}
+.block-color-pink_background {
+	background: rgba(255, 85, 163, 0.13);
+}
+.block-color-red_background {
+	background: rgba(255, 82, 71, 0.13);
+}
+.select-value-color-gray { background-color: rgba(234, 234, 235, 0.93); }
+.select-value-color-brown { background-color: rgba(213, 130, 38, 0.13); }
+.select-value-color-orange { background-color: rgba(252, 103, 27, 0.13); }
+.select-value-color-yellow { background-color: rgba(253, 183, 63, 0.13); }
+.select-value-color-green { background-color: rgba(76, 169, 66, 0.13); }
+.select-value-color-blue { background-color: rgba(45, 159, 226, 0.13); }
+.select-value-color-purple { background-color: rgba(187, 123, 230, 0.13); }
+.select-value-color-pink { background-color: rgba(255, 85, 163, 0.13); }
+.select-value-color-red { background-color: rgba(255, 82, 71, 0.13); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9a69edc7-d049-413d-b816-5fb4a6f166fc" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">💻</span></div><h1 class="page-title">New Page</h1></header><div class="page-body"><h1 id="8d37228e-e226-4f4a-bb63-2a136a788d2b" class="">shell 是什么</h1><p id="4f82a184-c743-45f9-8d07-67fb0427cbeb" class="">与计算机交互的文字接口</p><h2 id="2aed96d0-070b-4bc7-9979-8c0303cd6381" class="">使用shell</h2><pre id="1b8c2061-b1d5-436d-b9dd-9359c94a219f" class="code"><code>missing:~$</code></pre><p id="6a69b39a-e66f-40da-a9a4-28a4c26e6cb9" class="">这是shell最主要的文本接口。它告诉了我们主机名为`missing` 并且当前位于`~(home)`目录。
+`$`代表着我们当前为非root用户。您可以输入命令，命令会被shell解析。
+最简单的命令是执行一个程序</p><p id="51d4d92b-dc37-49ca-937f-6b43815fd192" class="">这是shell最主要的文本接口。它告诉了我们主机名为<code>missing</code> 并且当前位于<code>~(home)</code>目录。</p><p id="d0ae15a0-09ea-4583-8f6d-86174dd1d1aa" class=""><code>$</code>代表着我们当前为非root用户。您可以输入命令，命令会被shell解析。</p><p id="b8591ff6-5d01-419c-94d8-16b71314606b" class="">最简单的命令是执行一个程序</p><pre id="c52fe375-1d50-4b6b-bcf6-e3b247f213e4" class="code"><code>missing:~$ date
+Fri 10 Jan 2020 11:49:31 AM EST
+missing:~$</code></pre><p id="fc4fa59b-9960-4b2d-9720-fc0d3af89387" class="">我们还可以在输入命令时传递参数，参数间用空格分隔</p><pre id="9e8eacdd-e7aa-419b-949e-4ea4cf365177" class="code"><code>missing:~$ echo hello
+hello</code></pre><p id="0d256001-df6f-4ade-b228-c6be9d262854" class="">由于shell基于空格进行分割，为了打印出含空格的整体参数，我们可以使用引号或转义字符进行处理</p><p id="fe1fb72f-72d6-4727-9cb7-d549513910a2" class="">shell如何寻找如<code>echo</code>和<code>data</code>这样的程序</p><p id="9d0f478e-476f-4cbc-9888-72c57b89f5db" class="">当指令并非shell的关键字时，shell会咨询环境变量<code>$PATH</code> ,它给出了当shell接受指令时，进行程序搜索的路径</p><pre id="0ff9cba9-e727-483e-aa86-bd3b95c3f1c0" class="code"><code>missing:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+missing:~$ which echo
+/bin/echo
+missing:~$ /bin/echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</code></pre><p id="e7d45b6c-e017-45f1-929c-905df59e24d8" class="">简单的东西不如一笔带过</p><pre id="a39fa61c-7bc8-481a-b9da-38aa8ced5cb0" class="code"><code>missing:~$ pwd
+/home/missing
+missing:~$ cd /home
+missing:/home$ pwd
+/home
+missing:/home$ cd ..
+missing:/$ pwd
+/
+missing:/$ cd ./home
+missing:/home$ pwd
+/home
+missing:/home$ cd missing
+missing:~$ pwd
+/home/missing
+missing:~$ ../../bin/echo hello
+hello</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="bc9efa62-0ef0-445b-bcba-1e0f3b6bddff"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">相对路径与绝对路径，如果一个路径以<code>/</code>开头，那么它是一个<code>绝对路径</code>，否则为<code>相对路径</code>。在路径中，<code>.</code>表示的是当前目录，<code>..</code>表示的是上级目录</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fe57a119-68a0-4f8e-99bf-f47fafcc4bb7"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">shell会实时显示当前的路径信息，我们也可以通过配置shell提示符来显示各种有用的信息</div></figure><pre id="1a947e53-afbb-44a3-af88-2804a6b19ea2" class="code"><code>missing:~$ ls
+missing:~$ cd ..
+missing:/home$ ls
+missing
+missing:/home$ cd ..
+missing:/$ ls
+bin
+boot
+dev
+etc
+home
+...</code></pre><p id="da891180-9eb7-48d6-9517-6c8a09f40d2f" class="">大多数命令可以接受标记或选项(区别为前者不带值，后者带值),一般以<code>-</code>开头。例如<code>ls —help</code> </p><pre id="a428233f-7d2c-44bf-b740-9e27bfbe088a" class="code"><code>-l                         use a long listing format</code></pre><pre id="b89cc079-1f72-406c-bbd8-17b86ccb9030" class="code"><code>missing:~$ ls -l /home
+drwxr-xr-x 1 missing  users  4096 Jun 15  2019 missing</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fafe8fc4-a3d6-4fa4-8257-2a93c19b5c54"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">开始的第一个字符<code>d</code>代表<code>missing</code>是一个目录，后面的九个字符分别代表对应文件所有者，用户组和其他人所具有的权限（读，写，执行）。更多的详细信息会在之后给出。</div></figure><p id="66e747ce-c13a-4bf1-8273-32e8a5f51dc2" class="">如果你想了解更多关于某条命令的参数。可以使用<code>man</code>，它接受一个程序名作为参数，并将他的手册（<strong>manual)</strong>展示给你。使用<code>q</code> 退出手册程序。</p><pre id="3ab6837f-01bd-4294-8a67-8a58a8a30993" class="code"><code>missing:~$ man ls</code></pre><h3 id="96241f42-302b-43b3-8583-0598ac9e2b4e" class="">在程序间创建链接</h3><p id="9665d852-9274-475a-8668-9d377e8549c6" class="">在shell中，程序拥有两个主要的流：输入流与输出流。当程序执行时，他会从输入流接收输入并将输出传送到输出流中。在shell中我们的输入输出流都是我们的终端。我们在键盘输入，同时显示器作为输出。同时，我们也可以重定向这些流！</p><p id="824afc0e-e374-44eb-ae15-2d71da63a1f6" class="">最简单的重定向方式： <code>&lt; file</code>和<code>&gt; file</code> 他们将程序的输入输出重定向到文件。</p><pre id="562dc4be-3ba1-4e4c-9623-8d219e9ac826" class="code"><code>missing:~$ echo hello &gt; hello.txt
+missing:~$ cat hello.txt
+hello
+missing:~$ cat &lt; hello.txt
+hello
+missing:~$ cat &lt; hello.txt &gt; hello2.txt
+missing:~$ cat hello2.txt
+hello</code></pre><p id="c5b54515-abc3-472f-8924-c9bd8d020bc8" class="">当我们想要在文件中追加内容时，我们还可以使用  <code>&gt;&gt;</code> 它可以在一个文件内容的末尾增加内容。</p><p id="0a9850ed-0641-4cb4-9ffa-d4385f097662" class="">更好的利用文件重定向，我们还可以使用管道。</p><pre id="f11ea87b-a00c-4acc-ade8-b45323d00b7a" class="code"><code>missing:~$ ls -l / | tail -n1
+drwxr-xr-x 1 root  root  4096 Jun 20  2019 var
+missing:~$ curl --head --silent baidu.com | grep --ignore-case content-length | cut --delimiter=&#x27; &#x27; -f2
+81</code></pre><p id="ef540aa0-6f3a-4b69-95ee-5ee0e84a9e42" class="">管道以 <code>|</code> 作为操作符，我们可以让左侧的程序输出成为右侧程序的输入</p><p id="8eded6e2-eb7d-47a6-b1f2-7f270141fb02" class="">通过尝试下面两条指令的异同来感受更多细节</p><pre id="d5381c99-b749-42de-a38b-6d5f4b03cceb" class="code"><code>missing:~$ curl --head --silent baidu.com | grep --ignore-case content-length 
+missing:~$ curl --head --silent baidu.com | grep --ignore-case content-length | cut --delimiter=&#x27; &#x27; -f2</code></pre><h2 id="065b4734-9fa8-4c1a-93d3-3e2b2be57354" class=""><strong>一个功能全面又强大的工具</strong></h2><p id="e7211d3a-9b0c-4bd4-b0e9-bebea80e44e2" class="">对于大多数的类 Unix 系统，有一类用户是非常特殊的，那就是：根用户（root user）。 您应该已经注意到了，在上面的输出结果中，根用户几乎不受任何限制，他可以创建、读取、更新和删除系统中的任何文件。 通常在我们并不会以根用户的身份直接登录系统，因为这样可能会因为某些错误的操作而破坏系统。 取而代之的是我们会在需要的时候使用 <code>sudo</code> 命令。顾名思义，它的作用是让您可以以 su（super user 或 root 的简写）的身份执行一些操作。 当您遇到拒绝访问（permission denied）的错误时，通常是因为此时您必须是根用户才能操作。然而，请再次确认您是真的要执行此操作。</p><p id="6e8c6fba-8bc4-41d8-b858-b2c387cdd4f6" class="">有一件事情是您必须作为根用户才能做的，那就是向 <code>sysfs</code> 文件写入内容。系统被挂载在 <code>/sys</code> 下，<code>sysfs</code> 文件则暴露了一些内核（kernel）参数。 因此，您不需要借助任何专用的工具，就可以轻松地在运行期间配置系统内核。<strong>注意 Windows 和 macOS 没有这个文件</strong></p><p id="4cf35472-d411-4cd0-87e4-a2af3fb7fc47" class="">例如，您笔记本电脑的屏幕亮度写在 <code>brightness</code> 文件中，它位于</p><pre id="ee9803a8-7f2e-4e94-9c26-ab5679d59ccd" class="code"><code>/sys/class/backlight</code></pre><p id="1cdf4efc-2d83-4585-9bd2-577c96adfe05" class="">通过将数值写入该文件，我们可以改变屏幕的亮度。现在，蹦到您脑袋里的第一个想法可能是：</p><pre id="6800e433-7c61-41f9-b221-0475d0285982" class="code"><code>$ sudo find -L /sys/class/backlight -maxdepth 2 -name &#x27;*brightness*&#x27;
+/sys/class/backlight/thinkpad_screen/brightness
+$ cd /sys/class/backlight/thinkpad_screen
+$ sudo echo 3 &gt; brightness
+An error occurred while redirecting file &#x27;brightness&#x27;
+open: Permission denied</code></pre><p id="a1ffc36b-296e-41fd-9816-1315d67cdb86" class="">出乎意料的是，我们还是得到了一个错误信息。毕竟，我们已经使用了 <code>sudo</code> 命令！关于 shell，有件事我们必须要知道。<code>|</code>、<code>&gt;</code>、和 <code>&lt;</code> 是通过 shell 执行的，而不是被各个程序单独执行。 <code>echo</code> 等程序并不知道 <code>|</code> 的存在，它们只知道从自己的输入输出流中进行读写。 对于上面这种情况， <em>shell</em> (权限为您的当前用户) 在设置 <code>sudo echo</code> 前尝试打开 brightness 文件并写入，但是系统拒绝了 shell 的操作因为此时 shell 不是根用户。</p><p id="0cc36d6b-afa7-4b35-8fde-70c6021aed34" class="">明白这一点后，我们可以这样操作：</p><pre id="9da15c54-9076-4884-bb06-208a56cb9b09" class="code"><code>$ echo 3 | sudo tee brightness</code></pre><p id="13353240-bec7-4ebe-9d6a-70a0414931f5" class="">因为打开 <code>/sys</code> 文件的是 <code>tee</code> 这个程序，并且该程序以 <code>root</code> 权限在运行，因此操作可以进行。 这样您就可以在 <code>/sys</code> 中愉快地玩耍了，例如修改系统中各种LED的状态（路径可能会有所不同）：</p><pre id="97519c9b-1446-457e-9697-ab800964874c" class="code"><code>$ echo 1 | sudo tee /sys/class/leds/input6::scrolllock/brightness</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5f51da70-5dee-4f69-8ff5-7031daf17e7a"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">你还可以在命令最前方添加<code>#</code>，它使得整条语句都是用root运行。</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="65f29b79-504d-4e95-9f75-e433f5b4608a"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">由于wsl(windows 下的linux子系统)并没有提供这些接口，所以如果可能，请使用一台linux机器操作（这些操作真的很有趣）。</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ccb9f317-218c-444f-9afd-14f42086a6ad"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">请再一次记忆输入输出流由shell执行，程序并不知道的这件事。程序本身只接受输入流的输入，输出到输出流。</div></figure><h2 id="875efec4-c5f4-4f81-a2ac-054910fd266f" class="">证书</h2><p id="83dac724-0df6-47ff-9b8e-4756cad11fcc" class="">文章内容原来自于<a href="https://github.com/missing-semester/missing-semester">The Missing Semester of Your CS Education</a>课程讲义，遵循Attribution-NonCommercial-ShareAlike 4.0 International CC BY-NC-SA 4.0许可。同时网站拥有社区版翻译，欢迎你的参与。</p><p id="44a75b6c-e525-4ab9-94bc-bfb64a862503" class="">
+</p></div></article></body></html>
